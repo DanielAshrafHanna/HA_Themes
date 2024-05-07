@@ -37,15 +37,15 @@ BACKGROUND_COLORS = {
 
 
 folder_fname = [
-    ("hacsfiles", Path("themes/ios-themes.yaml")),
-    ("local", Path("manual-install/ios-themes.yaml")),
+    ("hacsfiles", Path("themes/solace-themes.yaml")),
+    ("local", Path("manual-install/solace-themes.yaml")),
 ]
 for folder, fname in folder_fname:
     fname.parent.mkdir(parents=True, exist_ok=True)
     with fname.open("w") as f:
         f.write("---\n# From https://github.com/basnijholt/lovelace-ios-themes")
     for background in sorted(Path("themes").glob("homekit-bg-*.jpg")):
-        color = background.stem.split("homekit-bg-")[-1]
+        color = background.stem.split("solace-")[-1]
         if color in BACKGROUND_COLORS:
             app_header_background_color = BACKGROUND_COLORS[color]
         else:
