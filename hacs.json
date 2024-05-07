@@ -1,6 +1,6 @@
 {
-  "name": "iOS Themes - Dark Mode and Light Mode",
-  "hacs": "0.21.2",
-  "filename": "ios-themes.yaml",
+  "name": "Solace Themes",
+  "hacs": "0.0.1",
+  "filename": "solace-themes.yaml",
   "render_readme": true
 }
