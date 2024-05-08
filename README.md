@@ -1,30 +1,9 @@
-# iOS Themes  [DANY]
+# Solace Themes 
 
-[![Action Status](https://github.com/basnijholt/lovelace-ios-themes/workflows/yamllint/badge.svg)](https://github.com/basnijholt/lovelace-ios-themes/actions)
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
-[![homeassistant_community](https://img.shields.io/badge/HA%20community-forum-brightgreen)](https://community.home-assistant.io/t/ios-dark-and-light-mode-with-easy-background-change/206215)
-[![Github Stars](https://img.shields.io/github/stars/basnijholt/lovelace-ios-themes)](https://github.com/basnijholt/lovelace-ios-themes)
 
-> The iOS Theme by @basnijholt and modified from @kalkih's [Gist](https://gist.github.com/kalkih/fbe84b371ef7f992c3bd51b235e2c299)
+Installing this theme adds 1 theme:
+- `solace-theme`
 
-A generalized version of [*iOS Dark Mode Theme*](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)!
-This includes both **Dark and Light Mode** and 7 different HomeKit backgrounds.
-Installing this theme adds 28 different themes:
-- `ios-light-mode-dark-green`
-- `ios-dark-mode-dark-green`
-- `ios-light-mode-light-blue`
-- `ios-dark-mode-light-blue`
-- `ios-light-mode-light-green`
-- `ios-dark-mode-light-green`
-- `ios-light-mode-orange`
-- `ios-dark-mode-orange`
-- `ios-light-mode-blue-red`
-- `ios-dark-mode-blue-red`
-- `ios-light-mode-red`
-- `ios-dark-mode-red`
-- `ios-light-mode-dark-blue`
-- `ios-dark-mode-dark-blue`
-- `...` and versions with the `-alternative` suffix
 
 ## Screenshots
 
@@ -34,22 +13,7 @@ Low quality `gif`, click [here](https://github.com/basnijholt/lovelace-ios-theme
 
 [![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/overview.gif)](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/overview.mp4)
 
-### Overview
 
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/blue-red-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/blue-red-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/dark-blue-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/dark-blue-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/dark-green-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/dark-green-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/light-blue-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/light-blue-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/light-green-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/light-green-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/orange-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/orange-light.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/red-dark.png)
-![Theme - Overview](https://github.com/basnijholt/lovelace-ios-themes/raw/media/screenshots/red-light.png)
 
 
 ## Installation
@@ -107,4 +71,4 @@ Then add `input_select.theme`, `input_boolean.theme_alternative`, and `input_boo
 ## How does the code work
 
 All the **28(!)** themes in [`themes/`](themes/) are **automatically generated** using [`create-themes.py`](create-themes.py) and the information in [`settings-light-dark.yaml`](settings-light-dark.yaml) is passed into [`template.jinja2`](template.jinja2).
-The resulting file is [`themes/ios-themes.yaml`](themes/ios-themes.yaml) which contains all variants (different backgrounds and dark/light mode).
+The resulting file is [`themes/solace-themes.yaml`](themes/solace-themes.yaml) which contains all variants (different backgrounds and dark/light mode).
