@@ -1,6 +1,6 @@
 {
   "name": "Solace Themes",
-  "hacs": "0.0.1",
+  "hacs": "0.2.1",
   "filename": "solace-themes.yaml",
   "render_readme": true
 }

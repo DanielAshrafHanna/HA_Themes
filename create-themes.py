@@ -1,5 +1,5 @@
 # Render themes, creates them as separate files and as
-# one combined file `ios-themes.yaml`.
+# one combined file `solace-themes.yaml`.
 # Part of https://github.com/basnijholt/lovelace-ios-themes
 
 from pathlib import Path
