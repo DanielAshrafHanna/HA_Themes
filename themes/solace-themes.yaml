@@ -120,7 +120,7 @@ solace:
   
 solace-overall:
   # Global
-background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/solace-themes/solace-theme.png')"
+  background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/solace-themes/solace-theme.png')"
   lovelace-background: var(--background-image)
   primary-color: "#ff9f09"  # from Apple systemOrange dark mode
   light-primary-color: "#B6B6C1"  # (icons on left menu) (light: systemGray5 from iOS dark mode, dark: XXX)
