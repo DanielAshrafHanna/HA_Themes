@@ -79,5 +79,20 @@ solace_theme_1:
   input-dropdown-icon-color: var(--primary-text-color)
   input-idle-line-color: var(--secondary-text-color)
   input-hover-line-color: var(--secondary-text-color)
+  mdc-text-field-fill-color: rgba(255, 255, 255, 0.08)
+  mdc-text-field-disabled-fill-color: rgba(255, 255, 255, 0.04)
+  mdc-text-field-ink-color: "#FFF"
+  mdc-text-field-label-ink-color: rgba(255, 255, 255, 0.7)
+  mdc-text-field-disabled-ink-color: rgba(255, 255, 255, 0.38)
+  mdc-text-field-idle-line-color: rgba(255, 255, 255, 0.45)
+  mdc-text-field-hover-line-color: var(--accent-color)
+  mdc-select-fill-color: rgba(255, 255, 255, 0.08)
+  mdc-select-disabled-fill-color: rgba(255, 255, 255, 0.04)
+  mdc-select-ink-color: "#FFF"
+  mdc-select-label-ink-color: rgba(255, 255, 255, 0.7)
+  mdc-select-disabled-ink-color: rgba(255, 255, 255, 0.38)
+  mdc-select-dropdown-icon-color: rgba(255, 255, 255, 0.7)
+  mdc-select-idle-line-color: rgba(255, 255, 255, 0.45)
+  mdc-select-hover-line-color: var(--accent-color)
   codemirror-property: var(--accent-color)
   clear-background-color: "#2c2c2c"
