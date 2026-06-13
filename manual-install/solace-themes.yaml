@@ -89,6 +89,20 @@ solace_theme_1:
   mdc-theme-text-disabled-on-background: rgba(255, 255, 255, 0.38)
   material-background-color: "#1c1c1e"
   material-secondary-background-color: var(--primary-background-color)
+  ha-color-surface-default: "#1c1c1e"
+  ha-color-on-surface-default: var(--primary-text-color)
+  ha-color-text-primary: var(--primary-text-color)
+  ha-color-text-secondary: var(--secondary-text-color)
+  ha-color-text-disabled: var(--disabled-text-color)
+  ha-color-form-background: var(--input-fill-color)
+  ha-color-form-background-hover: "#2f2f32"
+  ha-color-form-background-disabled: var(--input-disabled-fill-color)
+  ha-color-fill-neutral-quiet-resting: var(--input-fill-color)
+  ha-color-fill-neutral-quiet-hover: "#2f2f32"
+  ha-color-fill-neutral-normal-resting: var(--input-fill-color)
+  ha-color-fill-neutral-normal-hover: "#2f2f32"
+  ha-color-on-neutral-normal: var(--primary-text-color)
+  ha-color-on-neutral-quiet: var(--secondary-text-color)
   rgb-primary-text-color: 255, 255, 255
   rgb-secondary-text-color: 211, 211, 211
   rgb-card-background-color: 10, 10, 10
