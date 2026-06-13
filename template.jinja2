@@ -15,7 +15,7 @@ ios-{{ which }}-mode-{{ color }}{{ suffix }}:
   primary-text-color: {{ primary_text_color }}
   secondary-text-color: {{ secondary_text_color }}
   text-primary-color: "#FFF"
-  disabled-text-color: "#555"  # XXX: https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/2
+  disabled-text-color: {{ disabled_text_color }}
   text-dark-color: "#FFF"
   # Sidebar Menu
   sidebar-background-color: var(--primary-background-color)
@@ -77,68 +77,107 @@ ios-{{ which }}-mode-{{ color }}{{ suffix }}:
   mini-media-player-icon-color: white
   # Added for https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/72
   # TODO: add description for lines below. Suggested in https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/72
+  {% if which == "dark" %}
   input-ink-color: var(--primary-text-color)
-  input-fill-color: transparent
-  input-disabled-fill-color: transparent
-  input-label-ink-color: var(--primary-text-color)
+  input-fill-color: "#242426"
+  input-disabled-fill-color: "#1f1f21"
+  input-label-ink-color: rgba(255, 255, 255, 0.72)
   input-disabled-ink-color: var(--disabled-text-color)
-  input-dropdown-icon-color: var(--primary-text-color)
-  input-idle-line-color: var(--secondary-text-color)
-  input-hover-line-color: var(--secondary-text-color)
+  input-dropdown-icon-color: rgba(255, 255, 255, 0.72)
+  input-idle-line-color: rgba(255, 255, 255, 0.45)
+  input-hover-line-color: var(--accent-color)
+  input-outlined-idle-border-color: rgba(255, 255, 255, 0.38)
+  input-outlined-hover-border-color: var(--accent-color)
   mdc-theme-surface: "#1c1c1e"
   mdc-theme-on-surface: "#FFF"
+  {% else %}
+  input-ink-color: "#161a17"
+  input-fill-color: rgba(255, 255, 255, 0.92)
+  input-disabled-fill-color: rgba(255, 255, 255, 0.38)
+  input-label-ink-color: rgba(22, 26, 23, 0.72)
+  input-disabled-ink-color: rgba(22, 26, 23, 0.48)
+  input-dropdown-icon-color: rgba(22, 26, 23, 0.72)
+  input-idle-line-color: rgba(22, 26, 23, 0.38)
+  input-hover-line-color: var(--accent-color)
+  input-outlined-idle-border-color: rgba(22, 26, 23, 0.38)
+  input-outlined-hover-border-color: var(--accent-color)
+  mdc-theme-surface: "#f5f5f5"
+  mdc-theme-on-surface: "#161a17"
+  {% endif %}
   mdc-theme-background: var(--primary-background-color)
-  mdc-theme-text-primary-on-background: "#FFF"
-  mdc-theme-text-secondary-on-background: rgba(255, 255, 255, 0.7)
-  mdc-theme-text-disabled-on-background: rgba(255, 255, 255, 0.38)
-  material-background-color: "#1c1c1e"
+  mdc-theme-text-primary-on-background: var(--input-ink-color)
+  mdc-theme-text-secondary-on-background: var(--input-label-ink-color)
+  mdc-theme-text-disabled-on-background: var(--input-disabled-ink-color)
+  material-background-color: var(--mdc-theme-surface)
   material-secondary-background-color: var(--primary-background-color)
-  paper-input-container-color: rgba(255, 255, 255, 0.7)
-  paper-input-container-input-color: "#FFF"
+  paper-input-container-color: var(--input-label-ink-color)
+  paper-input-container-input-color: var(--input-ink-color)
   paper-input-container-focus-color: var(--accent-color)
-  ha-textfield-fill-color: "#1c1c1e"
-  ha-textfield-ink-color: "#FFF"
-  ha-textfield-label-ink-color: rgba(255, 255, 255, 0.7)
-  ha-select-fill-color: "#1c1c1e"
-  ha-select-ink-color: "#FFF"
-  ha-select-label-ink-color: rgba(255, 255, 255, 0.7)
-  mdc-text-field-fill-color: rgba(255, 255, 255, 0.08)
-  mdc-text-field-disabled-fill-color: rgba(255, 255, 255, 0.04)
-  mdc-text-field-ink-color: "#FFF"
-  mdc-text-field-label-ink-color: rgba(255, 255, 255, 0.7)
-  mdc-text-field-disabled-ink-color: rgba(255, 255, 255, 0.38)
-  mdc-text-field-idle-line-color: rgba(255, 255, 255, 0.45)
+  ha-textfield-fill-color: var(--input-fill-color)
+  ha-textfield-ink-color: var(--input-ink-color)
+  ha-textfield-label-ink-color: var(--input-label-ink-color)
+  ha-select-fill-color: var(--input-fill-color)
+  ha-select-ink-color: var(--input-ink-color)
+  ha-select-label-ink-color: var(--input-label-ink-color)
+  mdc-text-field-fill-color: var(--input-fill-color)
+  mdc-text-field-disabled-fill-color: var(--input-disabled-fill-color)
+  mdc-text-field-ink-color: var(--input-ink-color)
+  mdc-text-field-label-ink-color: var(--input-label-ink-color)
+  mdc-text-field-disabled-ink-color: var(--input-disabled-ink-color)
+  mdc-text-field-idle-line-color: var(--input-idle-line-color)
   mdc-text-field-hover-line-color: var(--accent-color)
-  mdc-select-fill-color: rgba(255, 255, 255, 0.08)
-  mdc-select-disabled-fill-color: rgba(255, 255, 255, 0.04)
-  mdc-select-ink-color: "#FFF"
-  mdc-select-label-ink-color: rgba(255, 255, 255, 0.7)
-  mdc-select-disabled-ink-color: rgba(255, 255, 255, 0.38)
-  mdc-select-dropdown-icon-color: rgba(255, 255, 255, 0.7)
-  mdc-select-idle-line-color: rgba(255, 255, 255, 0.45)
+  mdc-select-fill-color: var(--input-fill-color)
+  mdc-select-disabled-fill-color: var(--input-disabled-fill-color)
+  mdc-select-ink-color: var(--input-ink-color)
+  mdc-select-label-ink-color: var(--input-label-ink-color)
+  mdc-select-disabled-ink-color: var(--input-disabled-ink-color)
+  mdc-select-dropdown-icon-color: var(--input-dropdown-icon-color)
+  mdc-select-idle-line-color: var(--input-idle-line-color)
   mdc-select-hover-line-color: var(--accent-color)
-  mdc-filled-text-field-container-color: rgba(255, 255, 255, 0.08)
-  mdc-filled-text-field-disabled-container-color: rgba(255, 255, 255, 0.04)
-  mdc-filled-text-field-input-text-color: "#FFF"
-  mdc-filled-text-field-label-text-color: rgba(255, 255, 255, 0.7)
-  mdc-filled-text-field-hover-label-text-color: rgba(255, 255, 255, 0.85)
+  mdc-filled-text-field-container-color: var(--input-fill-color)
+  mdc-filled-text-field-disabled-container-color: var(--input-disabled-fill-color)
+  mdc-filled-text-field-input-text-color: var(--input-ink-color)
+  mdc-filled-text-field-label-text-color: var(--input-label-ink-color)
+  mdc-filled-text-field-hover-label-text-color: var(--input-ink-color)
   mdc-filled-text-field-focus-label-text-color: var(--accent-color)
-  mdc-filled-text-field-disabled-input-text-color: rgba(255, 255, 255, 0.38)
-  mdc-filled-text-field-disabled-label-text-color: rgba(255, 255, 255, 0.38)
-  mdc-filled-text-field-active-indicator-color: rgba(255, 255, 255, 0.45)
+  mdc-filled-text-field-disabled-input-text-color: var(--input-disabled-ink-color)
+  mdc-filled-text-field-disabled-label-text-color: var(--input-disabled-ink-color)
+  mdc-filled-text-field-active-indicator-color: var(--input-idle-line-color)
   mdc-filled-text-field-hover-active-indicator-color: var(--accent-color)
   mdc-filled-text-field-focus-active-indicator-color: var(--accent-color)
-  mdc-filled-select-container-color: rgba(255, 255, 255, 0.08)
-  mdc-filled-select-disabled-container-color: rgba(255, 255, 255, 0.04)
-  mdc-filled-select-selected-text-color: "#FFF"
-  mdc-filled-select-label-text-color: rgba(255, 255, 255, 0.7)
-  mdc-filled-select-hover-label-text-color: rgba(255, 255, 255, 0.85)
+  mdc-filled-select-container-color: var(--input-fill-color)
+  mdc-filled-select-disabled-container-color: var(--input-disabled-fill-color)
+  mdc-filled-select-selected-text-color: var(--input-ink-color)
+  mdc-filled-select-label-text-color: var(--input-label-ink-color)
+  mdc-filled-select-hover-label-text-color: var(--input-ink-color)
   mdc-filled-select-focus-label-text-color: var(--accent-color)
-  mdc-filled-select-disabled-selected-text-color: rgba(255, 255, 255, 0.38)
-  mdc-filled-select-disabled-label-text-color: rgba(255, 255, 255, 0.38)
-  mdc-filled-select-dropdown-icon-color: rgba(255, 255, 255, 0.7)
-  mdc-filled-select-disabled-dropdown-icon-color: rgba(255, 255, 255, 0.38)
-  mdc-filled-select-active-indicator-color: rgba(255, 255, 255, 0.45)
+  mdc-filled-select-disabled-selected-text-color: var(--input-disabled-ink-color)
+  mdc-filled-select-disabled-label-text-color: var(--input-disabled-ink-color)
+  mdc-filled-select-dropdown-icon-color: var(--input-dropdown-icon-color)
+  mdc-filled-select-disabled-dropdown-icon-color: var(--input-disabled-ink-color)
+  mdc-filled-select-active-indicator-color: var(--input-idle-line-color)
   mdc-filled-select-hover-active-indicator-color: var(--accent-color)
   mdc-filled-select-focus-active-indicator-color: var(--accent-color)
+  md-sys-color-primary: var(--accent-color)
+  md-sys-color-on-surface: var(--input-ink-color)
+  md-sys-color-on-surface-variant: var(--input-label-ink-color)
+  md-sys-color-surface: var(--mdc-theme-surface)
+  md-sys-color-surface-container-highest: var(--input-fill-color)
+  md-sys-color-outline: var(--input-outlined-idle-border-color)
+  md-filled-text-field-container-color: var(--input-fill-color)
+  md-filled-text-field-input-text-color: var(--input-ink-color)
+  md-filled-text-field-label-text-color: var(--input-label-ink-color)
+  md-filled-text-field-hover-label-text-color: var(--input-ink-color)
+  md-filled-text-field-focus-label-text-color: var(--accent-color)
+  md-filled-text-field-active-indicator-color: var(--input-idle-line-color)
+  md-filled-text-field-hover-active-indicator-color: var(--accent-color)
+  md-filled-text-field-focus-active-indicator-color: var(--accent-color)
+  md-filled-select-text-field-container-color: var(--input-fill-color)
+  md-filled-select-text-field-input-text-color: var(--input-ink-color)
+  md-filled-select-text-field-label-text-color: var(--input-label-ink-color)
+  md-filled-select-text-field-hover-label-text-color: var(--input-ink-color)
+  md-filled-select-text-field-focus-label-text-color: var(--accent-color)
+  md-filled-select-text-field-active-indicator-color: var(--input-idle-line-color)
+  md-filled-select-text-field-hover-active-indicator-color: var(--accent-color)
+  md-filled-select-text-field-focus-active-indicator-color: var(--accent-color)
   codemirror-property: var(--accent-color)
